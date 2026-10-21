@@ -2,7 +2,7 @@
 
 Minimal code to pretrain **Copy-Paste Language Models** from scratch, from the paper
 *Copy-Paste Language Models* (Nathan Godey & Yoav Artzi, Cornell University).
-[Paper: TODO arXiv link] · [Models](https://huggingface.co/collections/nthngdy/cplm-6acd1a63a8641f3c2b8488f3)
+[Paper](https://arxiv.org/abs/2610.19247) · [Models](https://huggingface.co/collections/nthngdy/cplm-6acd1a63a8641f3c2b8488f3)
 
 A CPLM adds a lightweight **Copy-Paste (CP) head** next to the LM head. The CP head
 points at an earlier token of the current document and copies it. It is triggered by
@@ -118,10 +118,13 @@ python -m pytest tests
 ## Citation
 
 ```bibtex
-@article{godey2026cplm,
-  title   = {Copy-Paste Language Models},
-  author  = {Godey, Nathan and Artzi, Yoav},
-  journal = {TODO},
-  year    = {2026}
+@misc{godey2026copypastelanguagemodels,
+      title={Copy-Paste Language Models},
+      author={Nathan Godey and Yoav Artzi},
+      year={2026},
+      eprint={2610.19247},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2610.19247},
 }
 ```
