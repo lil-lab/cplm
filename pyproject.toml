@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cplm"
+version = "0.1.0"
+description = "Pretraining Copy-Paste Language Models (CPLM) from scratch"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.9",
+    "transformers>=5.10,<6",
+    "lightning>=2.6",
+    "litdata>=0.2.60",
+    "wandb",
+]
+
+[project.optional-dependencies]
+data = ["pyarrow", "huggingface_hub"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["cplm"]

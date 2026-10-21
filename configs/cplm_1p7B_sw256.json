@@ -1,0 +1,52 @@
+{
+  "name": "cplm_1p7B_sw256",
+  "model": {
+    "vocab_size": 49152,
+    "eos_id": 0,
+    "max_position_embeddings": 4096,
+    "sliding_window": 256,
+    "full_attn_every": 0,
+    "tie_embeddings": true,
+    "rope_theta": 10000.0,
+    "nope_every": 0,
+    "attn_implementation": "flash_attention_3",
+    "hidden_size": 2048,
+    "intermediate_size": 8192,
+    "num_layers": 24,
+    "num_heads": 32,
+    "num_kv_heads": 32,
+    "init_std": 0.02
+  },
+  "optim": {
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "min_lr_ratio": 0.1,
+    "lr": 0.0005,
+    "warmup_steps": 2000,
+    "cooldown_steps": 4750
+  },
+  "train": {
+    "data_path": "data/fineweb-edu-350BT",
+    "ckpt_root": "checkpoints",
+    "strategy": "fsdp",
+    "compile": true,
+    "seed": 42,
+    "num_workers": 7,
+    "wandb_project": "cplm",
+    "seq_length": 4096,
+    "batch_size": 512,
+    "micro_batch_size": 4,
+    "steps": 95000,
+    "reduce_dtype": "bfloat16",
+    "ckpt_every": 20000,
+    "last_ckpt_every": 250,
+    "val_every": 250,
+    "val_batches": 50,
+    "log_every": 20
+  }
+}
