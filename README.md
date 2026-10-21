@@ -1,8 +1,11 @@
 # CPLM: Copy-Paste Language Models
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.19247-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.19247)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e)](https://huggingface.co/collections/nthngdy/cplm-6acd1a63a8641f3c2b8488f3)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
 Minimal code to pretrain **Copy-Paste Language Models** from scratch, from the paper
 *Copy-Paste Language Models* (Nathan Godey & Yoav Artzi, Cornell University).
-[Paper](https://arxiv.org/abs/2610.19247) · [Models](https://huggingface.co/collections/nthngdy/cplm-6acd1a63a8641f3c2b8488f3)
 
 A CPLM adds a lightweight **Copy-Paste (CP) head** next to the LM head. The CP head
 points at an earlier token of the current document and copies it. It is triggered by
